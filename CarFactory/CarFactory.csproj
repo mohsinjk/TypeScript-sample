@@ -28,7 +28,15 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
-    <TypeScriptCompile Include="car.ts" />
+    <TypeScriptCompile Include="Car.ts" />
+    <TypeScriptCompile Include="Drive.ts" />
+    <TypeScriptCompile Include="Engine.ts" />
+    <TypeScriptCompile Include="Enum\CarType.ts" />
+    <TypeScriptCompile Include="Interface\ICustomer.ts" />
+    <TypeScriptCompile Include="Interface\IDrive.ts" />
+    <TypeScriptCompile Include="Interface\IEngine.ts" />
+    <TypeScriptCompile Include="Interface\ICar.ts" />
+    <TypeScriptCompile Include="PrivateCustomer.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.Debug.config">

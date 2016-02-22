@@ -1,27 +1,16 @@
-﻿class Greeter {
-    element: HTMLElement;
-    span: HTMLElement;
-    timerToken: number;
+﻿window.onload = () => {
+    var engine = new CarModule.Engine("V8");
 
-    constructor(element: HTMLElement) {
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
-    }
+    var car = new CarModule.Car(CarModule.CarType.Combi, engine);
 
-    start() {
-        this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
-    }
+    var myObj = { name: "Mohsin JK", age: 10 };
+    car.welcome(myObj);
 
-    stop() {
-        clearTimeout(this.timerToken);
-    }
-}
-
-window.onload = () => {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
-    greeter.start();
+    var customer = new CarModule.PrivateCustomer();
+    customer.name = "Mohsin JK";
+    customer.age = 31;
+    car.welcome(customer);
+    car.start();
+    car.testDrive();
+    car.stop();
 };
