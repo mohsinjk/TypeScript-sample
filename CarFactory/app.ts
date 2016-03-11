@@ -5,7 +5,7 @@
 
     var customer = new CarModule.PrivateCustomer();
     customer.name = "Mohsin JK";
-    customer.age = 31;
+    customer.age = 30;
     car.welcome(customer);
     car.start();
     car.testDrive();
